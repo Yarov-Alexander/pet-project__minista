@@ -1,0 +1,30 @@
+.button {
+    @include flex-center(true);
+    font-weight: 500;
+    color: var(--color-white);
+    // background-color: var(--color-red-45);
+    padding: fluid-to-laptop(18, 14) fluid-to-laptop(24, 20);
+    border: none;
+    border-radius: var(--border-radius-s);
+    user-select: none;
+    cursor: pointer;
+
+    @include hover {
+        color: var(--color-white);
+        background-color: var(--color-white);
+    }
+
+    @include laptop {
+        border-radius: var(--border-radius-xs);
+    }
+
+    &.active {
+        scale: 1.05;
+    }
+
+    &.disable {
+        color: var(--color-gray-60);
+        background-color: var(--color-black-06);
+        pointer-events: none;
+    }
+}
