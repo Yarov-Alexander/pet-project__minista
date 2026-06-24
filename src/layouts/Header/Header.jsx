@@ -33,7 +33,9 @@ const Header = (props) => {
           className="header__logo"
           loading="eager"
         />
-        <nav className="header__menu">
+       
+        <dialog className="header__overlay-menu-dialog" open>
+          <nav className="header__menu">
           <ul className="header__menu-list">
             {menuItems.map(
               ({label, href}, index) => (
@@ -48,8 +50,7 @@ const Header = (props) => {
               )
             )}
           </ul>
-        </nav>
-        <dialog className="header__overlay-menu-dialog">
+          </nav>
           <div className="header__actions">
             <Button
               className="header__button"
@@ -66,8 +67,9 @@ const Header = (props) => {
               mode="transparent"
             />
           </div>
-          <BurgerButton className="header__burger-button visible-tablet"/>
         </dialog>
+        <BurgerButton 
+          className="header__burger-button visible-tablet is-active"/>
       </div>
     </header>
   )
