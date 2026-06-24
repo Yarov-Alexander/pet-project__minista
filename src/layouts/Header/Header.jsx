@@ -49,23 +49,25 @@ const Header = (props) => {
             )}
           </ul>
         </nav>
-        <div className="header__actions">
-          <Button
-           className="header__button"
-           label="Search"
-           isLabelHidden
-           mode="transparent"
-           iconName="search"
-          />
-          <Button
-            className="header__button"
-            label="Notifications"
-            isLabelHidden
-            iconName="notification"
-            mode="transparent"
-          />
-        </div>
-        <BurgerButton className="header__burger-button"/>
+        <dialog className="header__overlay-menu-dialog">
+          <div className="header__actions">
+            <Button
+              className="header__button"
+              label="Search"
+              isLabelHidden
+              mode="transparent"
+              iconName="search"
+            />
+            <Button
+              className="header__button"
+              label="Notifications"
+              isLabelHidden
+              iconName="notification"
+              mode="transparent"
+            />
+          </div>
+          <BurgerButton className="header__burger-button visible-tablet"/>
+        </dialog>
       </div>
     </header>
   )
