@@ -10,6 +10,11 @@
   animation-timeline: scroll();
   animation-range: 0 100px;
 
+
+  &__actions {
+    display: inline-flex;
+    column-gap: 10px;
+  }
   @keyframes scrolling-header {
     to {
       padding-block: 10px;
