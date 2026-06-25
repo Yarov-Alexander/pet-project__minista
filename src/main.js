@@ -1,1 +1,3 @@
-console.log('Привет!')
+import OverlayMenu from "@/mudules/OverlayMenu"
+
+new OverlayMenu()
